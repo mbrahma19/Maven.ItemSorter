@@ -1,15 +1,23 @@
 package rocks.zipcode.io;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 /**
  * @author leon on 30/01/2019.
  */
-public class ItemSorter {
+public class ItemSorter{
+    Item[] itemsToSort;
+
     public ItemSorter(Item[] items) {
+        this.itemsToSort = items;
+
     }
 
     public Item[] sort(Comparator<Item> comparator) {
-        return null;
+        Arrays.sort(itemsToSort,comparator);
+    return itemsToSort;
     }
 }
